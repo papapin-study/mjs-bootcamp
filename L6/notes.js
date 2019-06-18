@@ -12,10 +12,23 @@ notes = [{
             body: 'Body of Note2'
         }];
 
-i = notes.findIndex( (note, index) => {
-    //console.log(note)
-    return note.title === 'Note1'
-});
 
-console.log(i)
+        // const findNote = (notes, noteTitle) => {
+        //     const index = notes.findIndex( (note, index)=> {
+        //         return note.title === noteTitle;
+        //     })
+        //     return notes[index]
+        // }
+
+const findNote = (notes, noteTitle) => {
+    const note = notes.find( (note)=> {
+        return note.title === noteTitle;
+    })
+    return note;
+}
+
+let note = findNote(notes, 'Note2')
+
+
+console.log(note)
 

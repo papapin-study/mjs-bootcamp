@@ -1,9 +1,21 @@
-notes = ['Note1', 'Note2', 'Note3', 'Note4'];
+notes = [{
+            title: 'Note1',
+            body: 'Body of Note1'
+        }, {
+            title: 'Note2',
+            body: 'Body of Note2'
+        }, {
+            title: 'Note2',
+            body: 'Body of Note2'
+        }, {
+            title: 'Note2',
+            body: 'Body of Note2'
+        }];
 
-c = notes.indexOf('Note1');
+i = notes.findIndex( (note, index) => {
+    //console.log(note)
+    return note.title === 'Note1'
+});
 
-console.log(c);
+console.log(i)
 
-c = notes.indexOf('Note5');
-
-console.log(c);

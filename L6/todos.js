@@ -1,16 +1,21 @@
 todos = [{
-    title: 'Todo1',
-    body: 'Body of Note1'
+    text: 'Todo1',
+    complited: true
 }, {
-    title: 'Todo2',
-    body: 'Body of Note2'
+    text: 'Todo2',
+    complited: false
 }, {
-    title: 'Todo3',
-    body: 'Body of Note3'
+    text: 'Todo3',
+    complited: false
 }, {
-    title: 'Todo4',
-    body: 'Body of Note4'
-}];
+    text: 'Todo4',
+    complited: true
+}, {
+    text: 'Todo5',
+    complited: true
+    }
+
+];
 
 console.log(todos)
 console.log('---------');
@@ -25,3 +30,23 @@ const deleteTodo = (todos, todoTitle) => {
 deleteTodo(todos, 'Todo3')
 
 console.log(todos);
+console.log('---------');
+
+
+const getThingsToDo = ( todos ) => {
+
+    filteredTodos = todos.filter( (todo) => {
+
+       // if (todo.complited === false) { return todo  } 
+       //or
+       return !todo.complited
+        
+    }) 
+
+    return filteredTodos;
+}
+
+
+
+
+console.log(getThingsToDo(todos))

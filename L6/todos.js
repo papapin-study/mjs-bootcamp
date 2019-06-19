@@ -2,16 +2,16 @@ todos = [{
     text: 'Todo1',
     complited: true
 }, {
-    text: 'Todo2',
-    complited: false
-}, {
     text: 'Todo3',
     complited: false
 }, {
-    text: 'Todo4',
+    text: 'Todo5',
+    complited: false
+}, {
+    text: 'Todo2',
     complited: true
 }, {
-    text: 'Todo5',
+    text: 'Todo4',
     complited: true
     }
 
@@ -27,10 +27,10 @@ const deleteTodo = (todos, todoTitle) => {
     todos.splice(index, 1);
 }
 
-deleteTodo(todos, 'Todo3')
+// deleteTodo(todos, 'Todo3')
 
-console.log(todos);
-console.log('---------');
+// console.log(todos);
+// console.log('---------');
 
 
 const getThingsToDo = ( todos ) => {
@@ -47,6 +47,24 @@ const getThingsToDo = ( todos ) => {
 }
 
 
+// console.log(getThingsToDo(todos))
+// console.log('---------');
 
 
-console.log(getThingsToDo(todos))
+const sortTodos = (todos) => {
+    todos.sort( (a, b) => {
+        if ( a.complited === true  ) {
+            return -1
+        } else if ( b.complited === true ) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
+
+
+
+sortTodos(todos)
+console.log(todos);
+

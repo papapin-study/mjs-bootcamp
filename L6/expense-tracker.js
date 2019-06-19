@@ -38,9 +38,6 @@ account.addIncome = (desc, amount) => {
     account.income.push({ desc: desc, amount: amount })
 }
 
-
-
-
 account.addExpence('rent', 950);
 account.addExpence('cars', 250);
 account.addExpence('internet', 70);
